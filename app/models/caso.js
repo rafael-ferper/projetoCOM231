@@ -3,19 +3,19 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class caso extends Model {
+  class Caso extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      caso.hasOne(models.Pais,{
+      Caso.hasOne(models.Pais,{
         foreignKey: 'nomePais',
       })
     }
   };
-  caso.init({
+  Caso.init({
     dataHoje: {
       type: DataTypes.DATE,
       primaryKey: true
@@ -28,5 +28,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'caso',
   });
-  return caso;
+  return Caso;
 };
