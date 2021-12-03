@@ -1,9 +1,9 @@
 const PaisServices = require('./PaisServices');
-const CasoServices = require('./CasoServices');
+const CasosServices = require('./CasosServices');
 const DiaServices = require('./DiaServices');
 
 module.exports = {
     PaisServices : PaisServices,
-    CasoServices : CasoServices,
+    CasosServices : CasosServices,
     DiaServices : DiaServices
 }

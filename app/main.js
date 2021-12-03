@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const PaisController = require('./controllers/PaisController');
-const CasoController = require('./controllers/CasoController');
+const CasosController = require('./controllers/CasosController');
 
 
 
@@ -26,8 +26,7 @@ async function buscarCasos(){
         const casos = data['Countries']
         console.log(casos);
         for (const item of casos){
-            await CasoController.cadastrarCaso({dataHoje: item.Date, novosConf: item.NewConfirmed, totalConf: item.TotalConfirmed, novasMorte: item.NewDeaths, totalMorte: item.TotalDeaths})
-
+            await CasosController.cadastrarCasos({id: item.ID, dataHoje: item.Date, novosConf: item.NewConfirmed, totalConf: item.TotalConfirmed, novasMorte: item.NewDeaths, totalMorte: item.TotalDeaths})
         }
     } catch (error) {
         console.log('ERRO AO BUSCAR CASOS');
