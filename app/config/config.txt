@@ -1,0 +1,1 @@
+Responsável por armazenar todos os nossos arquivos de configuração e starter’s de alguns processos ou serviços da aplicação.

@@ -1,0 +1,1 @@
+Responsável por armazenar todos os controllers de nossa aplicação, centralizados em um único lugar. Geralmente é onde encontramos algumas das regras de negócio.
