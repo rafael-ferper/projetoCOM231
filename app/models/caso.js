@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      caso.hasOne(models.pais,{
+      caso.hasOne(models.Pais,{
         foreignKey: 'nomePais',
       })
     }
   };
   caso.init({
-    dataHoje: DataTypes.DATE,
+    dataHoje: {
+      type: DataTypes.DATE,
+      primaryKey: true
+    },
     novosConf: DataTypes.INTEGER,
     totalConf: DataTypes.INTEGER,
     novasMorte: DataTypes.INTEGER,

@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Pais.init({
-    nomePais: DataTypes.STRING,
+    nomePais: {
+      type: DataTypes.STRING,
+      primaryKey: true
+    }, 
     slug: DataTypes.STRING
   }, {
     sequelize,

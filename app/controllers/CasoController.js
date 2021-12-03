@@ -18,7 +18,7 @@ class CasoController {
         try {
 
             for (const item of dataHoje) {
-                const resultado = await dataBase.PaisCaso.create({nomePais: nomePais, dataHoje:item.dataHoje})
+                const resultado = await dataBase.create({nomePais: nomePais, dataHoje:item.dataHoje})
 
                 var pais = resultado.get({ plain: true});
                 if(resultado){
