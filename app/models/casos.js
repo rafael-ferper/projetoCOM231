@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Casos.hasOne(models.Pais,{
         foreignKey: 'nomePais',
+        through: 'Pais'
       })
     }
   };
@@ -28,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Casos',
+    timestamps: false
   });
   return Casos;
 };
