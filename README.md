@@ -16,13 +16,13 @@ A API escolhida foi a [Coronavirus COVID19 API](https://documenter.getpostman.co
 
 ### Requisitos e Especificações do Projeto
 
-[Sistema de consulta de números da Covid 19](https://docs.google.com/document/d/1neDEdx3qQKZJbB2QRVFR94CtXXmDlEDb/edit?usp=sharing&ouid=104085836446388510855&rtpof=true&sd=true)
+[Sistema de consulta de números da Covid 19](https://docs.google.com/document/d/1WgS0gKXwB_CTDbp02FI_V93y2EwBLtUPGY3cpZZ9K-0/edit?usp=sharing)
 
 
 
 ### Modelo Relacional criado a partir dos dados disponíveis na API
 
-![](https://drive.google.com/file/d/1OaHegrUdnsCpONDfIjy8_FQn2f6qx2Dv/view?usp=sharing)
+<img src="./Diagrama_ER_BD.png" alt="Diagrama Modelo Relacional">
 
 ## Como Utilizar
 
