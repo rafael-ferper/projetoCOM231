@@ -1,4 +1,4 @@
-Trabalho Final de COM231 - Banco de Dados II
+# Trabalho Final de COM231 - Banco de Dados II
 
 
 
@@ -22,9 +22,7 @@ A API escolhida foi a [Coronavirus COVID19 API](https://documenter.getpostman.co
 
 ### Modelo Relacional criado a partir dos dados disponíveis na API
 
-![image-20211203224722486](C:\Users\rtiof\AppData\Roaming\Typora\typora-user-images\image-20211203224722486.png)
-
-
+![Diagrama ER de banco de dados (pé de galinha) (4)](R:\Workspace\BD\projeto_covid19\Diagrama ER de banco de dados (pé de galinha) (4).png)
 
 ## Como Utilizar
 
