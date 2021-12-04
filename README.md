@@ -22,7 +22,7 @@ A API escolhida foi a [Coronavirus COVID19 API](https://documenter.getpostman.co
 
 ### Modelo Relacional criado a partir dos dados disponíveis na API
 
-![Diagrama ER de banco de dados (pé de galinha) (4)](R:\Workspace\BD\projeto_covid19\Diagrama ER de banco de dados (pé de galinha) (4).png)
+![](https://drive.google.com/file/d/1OaHegrUdnsCpONDfIjy8_FQn2f6qx2Dv/view?usp=sharing)
 
 ## Como Utilizar
 
