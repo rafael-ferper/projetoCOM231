@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   Dias.init({
     datas: {
       type: DataTypes.DATE,
-      primaryKey: true
     },
     nomePais: {
       type: DataTypes.STRING,

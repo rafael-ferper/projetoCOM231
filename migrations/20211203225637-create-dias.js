@@ -3,7 +3,6 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Dias', {
       datas: {
-        primaryKey: true,
         type: Sequelize.DATE
       },
       nomePais: {

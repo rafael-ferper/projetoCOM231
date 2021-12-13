@@ -42,7 +42,7 @@ async function buscarCasos(){
 
 
 async function buscarDia(){
-    const slugPais = "italy"
+    const slugPais = "united-states"
     try {
         console.log('DIAS');
         const { data } = await axios.get(`https://api.covid19api.com/total/dayone/country/${slugPais}`)
