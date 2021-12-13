@@ -15,11 +15,14 @@ async function buscarPaises(){
         for (const item of data){
             await PaisController.cadastrarPais({nomePais: item.Country, slug: item.Slug})
         }
+        await buscarCasos()
+        await buscarDia()
     }
     catch (error) {
         console.log('ERRO AO BUSCAR PAÍSES');
         console.log(error);
     }
+    
 }
 
 async function buscarCasos(){
@@ -27,7 +30,6 @@ async function buscarCasos(){
         console.log('CASOS')
         const { data } = await axios.get('https://api.covid19api.com/summary')
         const casos = data['Countries']
-        console.log(casos);
         for (const item of casos){
             await CasosController.cadastrarCasos({id: item.ID, nomePais: item.Country, dataHoje: item.Date, novosConf: item.NewConfirmed, totalConf: item.TotalConfirmed, novasMorte: item.NewDeaths, totalMorte: item.TotalDeaths})
         }
@@ -40,7 +42,7 @@ async function buscarCasos(){
 
 
 async function buscarDia(){
-    const slugPais = "italia"
+    const slugPais = "italy"
     try {
         console.log('DIAS');
         const { data } = await axios.get(`https://api.covid19api.com/total/dayone/country/${slugPais}`)
@@ -57,5 +59,3 @@ async function buscarDia(){
 }
 
 buscarPaises()
-buscarCasos()
-buscarDia()
