@@ -6,6 +6,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING
       },
+      nomePais: {
+        type: Sequelize.STRING,
+        references: { model: 'Pais', key: 'nomePais' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
       dataHoje: {
         type: Sequelize.DATE
       },

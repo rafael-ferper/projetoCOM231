@@ -10,14 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Dias.hasOne(models.Pais,{
-        foreignKey: 'nomePais',
-      })
     }
   };
   Dias.init({
-    data: {
+    datas: {
       type: DataTypes.DATE,
+      primaryKey: true
+    },
+    nomePais: {
+      type: DataTypes.STRING,
       primaryKey: true
     },
     numCasos: DataTypes.INTEGER

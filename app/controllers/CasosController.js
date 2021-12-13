@@ -14,25 +14,7 @@ class CasosController {
             console.log(error);
         }
     }
-    async associarCasoAoPais(nomePais, id){
-        try {
-
-            for (const item of id) {
-                const resultado = await dataBase.create({nomePais: nomePais, id:item.id})
-
-                var pais = resultado.get({ plain: true});
-                if(resultado){
-                    console.log("\x1b[32m", `associação do país ${nomePais} com o caso de ${item.id} criada com sucesso`)
-
-                    console.log(pais)
-                }
-            }
-
-        } catch (error) {
-            console.log("\x1b[31m", `ERRO ao criar associacao`)
-            console.log(error)
-        }
-    }
+    
 }
 
 module.exports = new CasosController

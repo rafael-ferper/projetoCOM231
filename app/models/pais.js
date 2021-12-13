@@ -10,7 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Pais.hasOne(models.Dias, {
+        through: 'dias',
+        foreignKey: 'nomePais',
+      })
+
+      Pais.hasOne(models.Casos, {
+        through: 'casos',
+        foreignKey: 'nomePais',
+      })
     }
   };
   Pais.init({

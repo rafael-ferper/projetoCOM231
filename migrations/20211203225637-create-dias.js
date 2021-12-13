@@ -2,9 +2,15 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Dias', {
-      data: {
+      datas: {
         primaryKey: true,
         type: Sequelize.DATE
+      },
+      nomePais: {
+        type: Sequelize.STRING,
+        references: { model: 'Pais', key: 'nomePais' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       numCasos: {
         type: Sequelize.INTEGER

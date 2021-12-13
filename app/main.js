@@ -2,7 +2,9 @@ const axios = require('axios');
 
 const PaisController = require('./controllers/PaisController');
 const CasosController = require('./controllers/CasosController');
-const DiasController = require('./controllers/DiasController')
+const DiasController = require('./controllers/DiasController');
+
+// const dataBase = require('./models')
 
 
 
@@ -27,7 +29,7 @@ async function buscarCasos(){
         const casos = data['Countries']
         console.log(casos);
         for (const item of casos){
-            await CasosController.cadastrarCasos({id: item.ID, dataHoje: item.Date, novosConf: item.NewConfirmed, totalConf: item.TotalConfirmed, novasMorte: item.NewDeaths, totalMorte: item.TotalDeaths})
+            await CasosController.cadastrarCasos({id: item.ID, nomePais: item.Country, dataHoje: item.Date, novosConf: item.NewConfirmed, totalConf: item.TotalConfirmed, novasMorte: item.NewDeaths, totalMorte: item.TotalDeaths})
         }
     } catch (error) {
         console.log('ERRO AO BUSCAR CASOS');
@@ -35,14 +37,18 @@ async function buscarCasos(){
     }
 }
 
+
+
 async function buscarDia(){
-    const slugPais = "brazil"
+    const slugPais = "italia"
     try {
         console.log('DIAS');
         const { data } = await axios.get(`https://api.covid19api.com/total/dayone/country/${slugPais}`)
         for (const item of data) {
-            await DiasController.cadastrarDias({data: item.Date, numCasos: item.Confirmed})
+            await DiasController.cadastrarDias({datas: item.Date, nomePais: item.Country, numCasos: item.Confirmed})
+        
         }
+        
     }
     catch (error){
         console.log(`ERRO AO BUSCAR DIAS DO(E) ${slugPais}`);

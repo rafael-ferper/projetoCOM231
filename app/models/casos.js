@@ -10,10 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Casos.hasOne(models.Pais,{
-        foreignKey: 'nomePais',
-        through: 'Pais'
-      })
     }
   };
   Casos.init({
